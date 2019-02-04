@@ -34,3 +34,52 @@ $$
 $$
 
 where \\( c_t = \sum_{s=1}^t (1-\alpha_s)\alpha_s^t \gamma^{t-s} \\)
+
+Let \\(\hat{R}_t = \sum_{k=1}^t r_k \alpha_k^t c_k\\). We can calculate \\(\hat{R}_t\\) using the following procedure:
+
+$$
+\begin{align}
+	& c_0 = 0\\
+	& \hat{R}_0 = 0 \\
+	& c_t = \alpha_t\gamma_t c_{t-1} + 1-\alpha_t \\
+	& \hat{R}_t = \alpha \hat{R}_{t-1} + c_t r_t \\
+	& \mbox{Reset } c_t \mbox{ to 0 if at the end of an episode} \\
+\end{align}  
+$$
+
+By (\ref{EqBarRt}), the difference between $\bar{R}_t$ and $\hat{R}_t$ is:
+
+$$ \bar{R}_t - \hat{R}_t = \gamma c_t R_{t+1} $$
+
+If the sequence of $\alpha_t$ have the following property:
+$$
+	(1-\alpha_s)\alpha_s^t \le 1-\alpha_t \\
+$$
+we can bound the \\(c_t\\) by
+
+$$
+c_t &\le& \sum_{s=1}^t (1-\alpha_t) \gamma^{t-s} < \frac{1-\alpha_t}{1-\gamma} \\
+$$
+
+This requires \\(\alpha_t\\) satisfy the following condition:
+$$
+\begin{align}
+	& (1-\alpha_s)\alpha_s^t \le 1-\alpha_t \\
+	& \frac{1-\alpha_s}{\alpha_0^s} \le \frac{1-\alpha_t}{\alpha_0^t} \\
+	& \frac{1-\alpha_{t-1}}{\alpha_0^{t-1}} \le \frac{1-\alpha_t}{\alpha_0^t} \\
+	& \alpha_t \le \frac{1}{2-\alpha_{t-1}} \\
+\end{align}  
+$$
+
+The difference between \\(\bar{R}_t\\) and \\(\hat{R}_t\\) is:
+
+$$ \bar{R}_t - \hat{R}_t = \gamma c_t R_{t+1} < \frac{1-\alpha_t}{1-\gamma} \gamma R_{t+1} $$
+
+If \\(1-\alpha_t\)) is much smaller than \\(1-\gamma\)), this difference is negligible.
+Or we can correct it by assuming \\(R_{t+1}=\bar{R}\\). Using (\ref{EqUnbiasedR}), we get:
+
+$$ (1- \alpha_0^t)\bar{R}  - \hat{R}_t = \gamma c_t \bar{R} $$
+
+This gives us a biased corrected estimator of \\(E(R)\\):
+
+$$ \bar{R} = \frac{\hat{R}_t}{1-\alpha_0^t - \gamma c_t} $$
