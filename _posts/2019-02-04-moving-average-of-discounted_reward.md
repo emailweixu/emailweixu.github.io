@@ -32,5 +32,5 @@ $$
 &= \sum_{k=1}^t r_k \alpha_k^t c_k + \gamma c_t R_{t+1} \label{EqBarRt} \\
 \end{align}
 $$
-where
-$$ c_t = \sum_{s=1}^t (1-\alpha_s)\alpha_s^t \gamma^{t-s} $$
+
+where \\( c_t = \sum_{s=1}^t (1-\alpha_s)\alpha_s^t \gamma^{t-s} \\)
