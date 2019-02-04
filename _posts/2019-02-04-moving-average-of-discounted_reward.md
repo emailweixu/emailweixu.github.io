@@ -11,9 +11,9 @@ $$ R_t = \sum_{s=t}^\infty \gamma^{s-t} r_s $$
 
 We want to calculate the exponential moving average of \\(R_t\\)
 
-\begin{equation}
+\\begin{equation}
 \bar{R}_t = \alpha \bar{R}_{t-1} + (1-\alpha) R_t \label{EqUnbiasedR}
-\begin{equation}
+\\begin{equation}
 
 Let \\(\alpha_s^t=\prod_{k=s+1}^t \alpha_k\\). To make an unbiased estimation of \\(\bar{R} = E(R)\\), we need to correct it by:
 
@@ -63,12 +63,12 @@ $$
 
 This requires \\(\alpha_t\\) satisfy the following condition:
 
-\begin{equation*}
+\\begin{equation*}
 	& (1-\alpha_s)\alpha_s^t \le 1-\alpha_t \\
 	& \frac{1-\alpha_s}{\alpha_0^s} \le \frac{1-\alpha_t}{\alpha_0^t} \\
 	& \frac{1-\alpha_{t-1}}{\alpha_0^{t-1}} \le \frac{1-\alpha_t}{\alpha_0^t} \\
 	& \alpha_t \le \frac{1}{2-\alpha_{t-1}} \\
-\end{equation*}  
+\\end{equation*}  
 
 
 The difference between \\(\bar{R}_t\\) and \\(\hat{R}_t\\) is:
@@ -80,6 +80,6 @@ Or we can correct it by assuming \\(R_{t+1}=\bar{R}\\). Using (\eqref{EqUnbiased
 
 $$ (1- \alpha_0^t)\bar{R}  - \hat{R}_t = \gamma c_t \bar{R} $$
 
-This gives us a biased corrected estimator of \\(E(R)\\):
+This gives us a biased corrected estimator of $E(R)$:
 
 $$ \bar{R} = \frac{\hat{R}_t}{1-\alpha_0^t - \gamma c_t} $$
