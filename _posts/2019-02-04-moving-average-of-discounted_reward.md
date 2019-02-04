@@ -40,13 +40,13 @@ where \\( c_t = \sum_{s=1}^t (1-\alpha_s)\alpha_s^t \gamma^{t-s} \\)
 Let \\( \hat{R}_t = \sum_{k=1}^t r_k \alpha_k^t c_k \\). We can calculate \\(\hat{R}_t\\) using the following procedure:
 
 $$
-\begin{align}
+\begin{align*}
 	& c_0 = 0\\
 	& \hat{R}_0 = 0 \\
 	& c_t = \alpha_t\gamma_t c_{t-1} + 1-\alpha_t \\
 	& \hat{R}_t = \alpha \hat{R}_{t-1} + c_t r_t \\
 	& \mbox{Reset } c_t \mbox{ to 0 if at the end of an episode} \\
-\end{align}  
+\end{align*}  
 $$
 
 By (\ref{EqBarRt}), the difference between $\bar{R}_t$ and $\hat{R}_t$ is:
@@ -66,12 +66,12 @@ $$
 This requires \\(\alpha_t\\) satisfy the following condition:
 
 $$
-\begin{align}
+\begin{align*}
 	& (1-\alpha_s)\alpha_s^t \le 1-\alpha_t \\
 	& \frac{1-\alpha_s}{\alpha_0^s} \le \frac{1-\alpha_t}{\alpha_0^t} \\
 	& \frac{1-\alpha_{t-1}}{\alpha_0^{t-1}} \le \frac{1-\alpha_t}{\alpha_0^t} \\
 	& \alpha_t \le \frac{1}{2-\alpha_{t-1}} \\
-\end{align}
+\end{align*}
 $$
 
 The difference between \\(\bar{R}_t\\) and \\(\hat{R}_t\\) is:
