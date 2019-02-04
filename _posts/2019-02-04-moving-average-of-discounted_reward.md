@@ -37,7 +37,7 @@ $$
 
 where \\( c_t = \sum_{s=1}^t (1-\alpha_s)\alpha_s^t \gamma^{t-s} \\)
 
-We can calculate \\(\hat{R}_t\\) using the following procedure:
+Let \\(\hat{R}_t\\) \\( = \sum_{k=1}^t r_k \alpha_k^t c_k \\):
 
 $$
 \begin{align*}
