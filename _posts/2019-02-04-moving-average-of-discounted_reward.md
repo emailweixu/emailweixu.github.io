@@ -6,15 +6,21 @@ categories: [machine-learning]
 ---
 
 The sum of discounted rewards at step t is:
+
 $$ R_t = \sum_{s=t}^\infty \gamma^{s-t} r_s $$
 
-We want to calculate the exponential moving average of $$R_t$$
+We want to calculate the exponential moving average of \\(R_t\\)
+
 $$
 \bar{R}_t = \alpha \bar{R}_{t-1} + (1-\alpha) R_t \label{EqUnbiasedR}
 $$
-Let $\alpha_s^t=\prod_{k=s+1}^t \alpha_k$. To make an unbiased estimation of $$\bar{R} = E(R)$$, we need to correct it by:
+
+Let \\(\alpha_s^t=\prod_{k=s+1}^t \alpha_k\\). To make an unbiased estimation of \\(\bar{R} = E(R)\\), we need to correct it by:
+
 $$ \bar{R} = \frac{\bar{R}_t}{1-\alpha_0^t} $$
-Now we develop a tractable procedure to calculate $$\bar{R}_t$$:
+
+Now we develop a tractable procedure to calculate \\(\bar{R}_t\\):
+
 $$
 \begin{align}
 \bar{R}_t &=& \alpha \bar{R}_{t-1} + (1-\alpha) R_t = \sum_{s=1}^t (1-\alpha_s)\alpha_s^t R_s \\
