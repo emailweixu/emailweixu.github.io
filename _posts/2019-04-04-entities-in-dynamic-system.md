@@ -39,3 +39,7 @@ several interesting questions:
 1. What kind of $$H$$ makes the system interesting?
 
 2. How the system evolves starting from a pure product state?
+
+At the coarsest level, we want to approximate the system by $$H=H_1 \otimes H_2 \cdots H_N$$, where
+
+$$H_k = \left[ \begin{array}{c c} e^{i\omega_k t} & 0 \\  0 & e^{-i\omega_k t} \\ \end{array} \right]$$ 
