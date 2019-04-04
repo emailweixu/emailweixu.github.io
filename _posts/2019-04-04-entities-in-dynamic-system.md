@@ -6,9 +6,11 @@ categories: [physics]
 ---
 
 A quantum system evolves accoring to the following equation:
+
 $$
 \frac{d\psi}{dt} = -iH\psi
 $$
+
 where $$H$$ is a Hermitian operator.
 
 The question we want to ask is what can be considered as an entity in this system. To be
