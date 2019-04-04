@@ -5,7 +5,9 @@ author: "Wei Xu"
 categories: [physics]
 ---
 
-A quantum system evolves accoring to the following equation:
+## Entities in Quantum Systems
+
+A quantum system evolves according to the following equation:
 
 $$
 \frac{d\psi}{dt} = -iH\psi
@@ -27,6 +29,13 @@ of the approximation indicates how strong the interaction of the entity with the
 of the system compared with its internal interations.
 
 However, it is not always possible to approximate the a system using a product state. How
-should we define entity in such a system?
+should we define entity in such systems?
 
+## Tensor Product Spaces of Spins
 
+Suppose the state space of our system is a tensor product space of $$N$$ spin systems, there are 
+several interesting questions:
+
+1. What kind of $$H$$ makes the system interesting?
+
+2. How the system evolves starting from a pure product state?
