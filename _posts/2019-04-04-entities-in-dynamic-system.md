@@ -28,7 +28,7 @@ approximation, then $$\psi_2(t)$$ can be considered as a sub-entity of $$\psi_1(
 of the approximation indicates how strong the interaction of the entity with the other part
 of the system compared with its internal interations.
 
-However, it is not always possible to approximate the a system using a product state. How
+However, it is not always possible to approximate the system using a product state. How
 should we define entity in such systems?
 
 ## Tensor Product Spaces of Spins
