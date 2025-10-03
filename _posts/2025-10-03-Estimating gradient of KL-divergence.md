@@ -20,11 +20,11 @@ To get an unbiaded estimator of $$\frac{\partial KL(p\\|q)}{\partial \theta}$$, 
 
 $$
 \begin{align}
-\frac{\partial KL(p\\|q)}{\partial \theta} &=& \frac{\partial \sum_x p_\theta(x) \log (p_\theta(x)/q(x)) }{\partial \theta} \\
-&=& \sum_x \frac{\partial p_\theta(x)}{\partial \theta} \log (p_\theta(x)/q(x)) + p_\theta(x) \frac{\partial \log (p_\theta(x)/q(x)) }{\partial \theta} \\
-&=& \sum_x p_\theta(x) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \log (p_\theta(x)/q(x)) + p_\theta(x) \frac{\partial \log (p_\theta(x)) }{\partial \theta} \\
-&=& E_{x\sim p} \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \log (p_\theta(x)/q(x)) + E_{x\sim p}\frac{\partial \log (p_\theta(x)) }{\partial \theta} \\
-&=& \frac{1}{2} E_{x\sim p} \frac{\partial (\log(p_\theta(x)/q(x)))^2}{\partial \theta} \\
+\frac{\partial KL(p\\|q)}{\partial \theta} &= \frac{\partial \sum_x p_\theta(x) \log (p_\theta(x)/q(x)) }{\partial \theta} \\
+&= \sum_x \frac{\partial p_\theta(x)}{\partial \theta} \log (p_\theta(x)/q(x)) + p_\theta(x) \frac{\partial \log (p_\theta(x)/q(x)) }{\partial \theta} \\
+&= \sum_x p_\theta(x) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \log (p_\theta(x)/q(x)) + p_\theta(x) \frac{\partial \log (p_\theta(x)) }{\partial \theta} \\
+&= E_{x\sim p} \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \log (p_\theta(x)/q(x)) + E_{x\sim p}\frac{\partial \log (p_\theta(x)) }{\partial \theta} \\
+&= \frac{1}{2} E_{x\sim p} \frac{\partial (\log(p_\theta(x)/q(x)))^2}{\partial \theta} \\
 \end{align}
 $$
 
@@ -42,11 +42,11 @@ For $$f_S$$, we have
 
 $$
 \begin{align}
-\frac{\partial f_S(x)}{\partial \theta}&=&\frac{\partial \log(p_\theta(x)/q(x)}{\partial \theta} - \frac{q(x)}{p_\theta(x)}\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
-&=& (1 - q(x)/p_\theta(x))\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
-&\approx& -\log(q(x)/p(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
-&=& \log(p_\theta(x)/q(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
-&=& f_X(x) \\
+\frac{\partial f_S(x)}{\partial \theta}&=\frac{\partial \log(p_\theta(x)/q(x)}{\partial \theta} - \frac{q(x)}{p_\theta(x)}\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
+&= (1 - q(x)/p_\theta(x))\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
+&\approx -\log(q(x)/p(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
+&= \log(p_\theta(x)/q(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
+&= f_X(x) \\
 \end{align}
 $$
 
