@@ -52,4 +52,5 @@ $$
 
 So when $$p(x)$$ is close to $$q(x)$$, $$\frac{\partial f_S(x)}{\partial \theta}$$
 is a good approximation to the unbiased estimator $$\frac{\partial f_X(x)}{\partial \theta}$$.
-This may explain why $$f_S$$ is found to be useful in LLM RL finetuning (e.g. [DeepSeek R1 eq (2)](https://arxiv.org/abs/2501.12948)).
+This may explain why $$f_S$$ is still found to be useful in LLM RL finetuning (e.g. [DeepSeek R1 eq (2)](https://arxiv.org/abs/2501.12948))
+even it is not unbiased.
