@@ -14,7 +14,7 @@ by [Schulman](http://joschu.net/blog/kl-approx.html).
 If $$p$$ is parameterized with $$\theta$$ and $$f(x)$$ is an unbiased estimator
 of $$KL(p\|q)$$, it is tempting to use $$\frac{\partial f(x)}{\partial \theta}$$ as an estimator for
 $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$. However, it is not an unbiased estimator
-of $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$
+of $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$ as previously noticed in [ALF](https://alf.readthedocs.io/en/latest/notes/estimating_derivative_of_expectation.html)
 
 To get an unbiaded estimator of $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$, we need to start from its definition:
 
