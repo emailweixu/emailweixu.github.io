@@ -16,7 +16,7 @@ of $$KL(p\|q)$$, it is tempting to use $$\frac{\partial f(x)}{\partial \theta}$$
 $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$. However, it is not an unbiased estimator
 of $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$ as previously noticed in [ALF](https://alf.readthedocs.io/en/latest/notes/estimating_derivative_of_expectation.html)
 
-To get an unbiaded estimator of $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$, we need to start from its definition:
+To get an unbiased estimator of $$\frac{\partial KL(p \Vert q)}{\partial \theta}$$, we need to start from its definition:
 
 $$
 \begin{align}
@@ -35,7 +35,7 @@ So $$f_X(x)=\frac{1}{2} \frac{\partial (\log(p_\theta(x)/q(x)))^2}{\partial \the
 unbiased estimator of $$\frac{\partial KL(p_\theta \Vert q)}{\partial \theta}$$. In fact, for any constant $$c$$,
 $$\frac{1}{2} \frac{\partial (c+\log(p_\theta(x)/q(x)))^2}{\partial \theta}$$ is an unbiased estimator.
 
-For estimator $f_N$, $$E_{x\sim p} \frac{\partial f_0(x)}{\theta}=0$$. So it is the worst possible estimator
+For estimator $f_N$, we have $$E_{x\sim p} \frac{\partial f_0(x)}{\theta}=0$$. So it is the worst possible estimator
 we can get.
 
 For $$f_S$$, we have
@@ -52,4 +52,4 @@ $$
 
 So when $$p(x)$$ is close to $$q(x)$$, $$\frac{\partial f_S(x)}{\partial \theta}$$
 is a good approximation to the unbiased estimator $$\frac{\partial f_X(x)}{\partial \theta}$$.
-This may explain why $$f_S$$ can still be useful in LLM RL finetuning (e.g. [DeepSeek R1 eq (2)](https://arxiv.org/abs/2501.12948)).
+This may explain why $$f_S$$ is found to be useful in LLM RL finetuning (e.g. [DeepSeek R1 eq (2)](https://arxiv.org/abs/2501.12948)).
