@@ -31,7 +31,7 @@ $$
 We used the fact that $$E_{x\sim p}\frac{\partial \log (p_\theta(x)) }{\partial \theta}=\sum_x \frac{\partial p_\theta(x)}{\partial \theta} = \frac{\partial}{\partial \theta}\sum_x p_\theta(x)=0$$
 in the above derivation.
 
-So $$f_X(x)=\frac{1}{2} \frac{\partial (\log(p_\theta(x)/q(x)))^2}{\partial \theta}$$ is an
+Let $$f_X(x)=\frac{1}{2} (\log(p_\theta(x)/q(x)))^2$$. So $$\frac{\partial f_X(x)}{\partial \theta}$$ is an
 unbiased estimator of $$\frac{\partial KL(p_\theta \Vert q)}{\partial \theta}$$. In fact, for any constant $$c$$,
 $$\frac{1}{2} \frac{\partial (c+\log(p_\theta(x)/q(x)))^2}{\partial \theta}$$ is an unbiased estimator.
 
@@ -42,9 +42,9 @@ For $$f_S$$, we have
 
 $$
 \begin{align}
-\frac{\partial f_S(x)}{\partial \theta}&=\frac{\partial \log(p_\theta(x)/q(x)}{\partial \theta} - \frac{q(x)}{p_\theta(x)}\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
+\frac{\partial f_S(x)}{\partial \theta}&=\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} - \frac{q(x)}{p_\theta(x)}\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
 &= (1 - q(x)/p_\theta(x))\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
-&\approx -\log(q(x)/p(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
+&\approx -\log(q(x)/p_\theta(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
 &= \log(p_\theta(x)/q(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
 &= f_X(x) \\
 \end{align}
