@@ -46,11 +46,11 @@ $$
 &= (1 - q(x)/p_\theta(x))\frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
 &\approx -\log(q(x)/p_\theta(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
 &= \log(p_\theta(x)/q(x)) \frac{\partial \log(p_\theta(x)/q(x))}{\partial \theta} \\
-&= f_X(x) \\
+&= \frac{\partial f_X(x)}{\partial \theta} \\
 \end{align}
 $$
 
 So when $$p(x)$$ is close to $$q(x)$$, $$\frac{\partial f_S(x)}{\partial \theta}$$
 is a good approximation to the unbiased estimator $$\frac{\partial f_X(x)}{\partial \theta}$$.
 This may explain why $$f_S$$ is still found to be useful in LLM RL finetuning (e.g. [DeepSeek R1 eq (2)](https://arxiv.org/abs/2501.12948))
-even it is not unbiased.
+even though it is not unbiased.
